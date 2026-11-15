@@ -1,0 +1,9 @@
+# Hongguo (红果短剧) routing rule set
+# Routes Hongguo domains to DIRECT (红果 group)
+# NOTE: security.snssdk.com is intentionally NOT included — it stays on TikTok (Singapore) for login/security.
+domain_suffix_set:
+- hongguo.com
+- fqnovel.com
+- fqnovelpic.com
+- qznovelvod.com
+- reading.snssdk.com
