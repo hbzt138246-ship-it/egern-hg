@@ -1,5 +1,8 @@
 # Hongguo (红果短剧) routing rule set
 # Routes Hongguo domains to DIRECT (红果 group)
+# The 6 domains below are the user's current Hongguo traffic rules + DNS forwards.
+# fqnovel.com / fqnovelpic.com: observed in Hongguo connection logs; currently covered
+# by the Final 直连 catch-all (cn.yaml), kept here for explicit coverage.
 # NOTE: security.snssdk.com is intentionally NOT included — it stays on TikTok (Singapore) for login/security.
 domain_suffix_set:
 - hongguo.com
@@ -7,3 +10,6 @@ domain_suffix_set:
 - fqnovelpic.com
 - qznovelvod.com
 - reading.snssdk.com
+- qznovelpic.com
+- zijieapi.com
+- byteimg.com
