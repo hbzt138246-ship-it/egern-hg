@@ -2,8 +2,8 @@
 # AUTHOR: blackmatrix7 + QuixoticHeart proxy.yaml + Binance dynamic-config + Binance AWS ELB, consolidated 2026-11-16
 # UPDATED: 2026-11-16
 # DOMAIN-SUFFIX: 74
-# IP-CIDR: 1
-# TOTAL: 75
+# IP-CIDR: 2
+# TOTAL: 76
 DOMAIN-SUFFIX,aad90d5c0e88c4b4285bd912f64d970d-14039444741.ap-northeast-1.elb.amazonaws.com
 DOMAIN-SUFFIX,appsflayer.com
 DOMAIN-SUFFIX,binance.cc
@@ -79,3 +79,4 @@ DOMAIN-SUFFIX,saasexch.info
 DOMAIN-SUFFIX,saasexch.io
 DOMAIN-SUFFIX,trustwallet.com
 IP-CIDR,18.180.191.237/32,no-resolve
+IP-CIDR,13.192.105.128/32,no-resolve
