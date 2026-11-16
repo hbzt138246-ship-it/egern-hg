@@ -1,11 +1,13 @@
 # NAME: Binance
 # AUTHOR: blackmatrix7 + QuixoticHeart proxy.yaml + Binance dynamic-config + Binance AWS ELB, consolidated 2026-11-16
 # UPDATED: 2026-11-16
-# DOMAIN-SUFFIX: 74
+# DOMAIN-SUFFIX: 76
 # IP-CIDR: 2
-# TOTAL: 76
+# TOTAL: 78
 DOMAIN-SUFFIX,aad90d5c0e88c4b4285bd912f64d970d-14039444741.ap-northeast-1.elb.amazonaws.com
 DOMAIN-SUFFIX,appsflayer.com
+DOMAIN-SUFFIX,appsflyer.com
+DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,binance.cc
 DOMAIN-SUFFIX,binance.charity
 DOMAIN-SUFFIX,binance.click
