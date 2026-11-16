@@ -1,8 +1,8 @@
 # NAME: Binance
-# AUTHOR: blackmatrix7, consolidated 2026-11-16 (+ nftstatic.com, forter.com)
+# AUTHOR: blackmatrix7, consolidated 2026-11-16 (+ nftstatic.com, forter.com, bscdnweb.com)
 # UPDATED: 2026-11-16
-# DOMAIN-SUFFIX: 14
-# TOTAL: 14
+# DOMAIN-SUFFIX: 15
+# TOTAL: 15
 DOMAIN-SUFFIX,appsflayer.com
 DOMAIN-SUFFIX,binance.cloud
 DOMAIN-SUFFIX,binance.com
@@ -13,6 +13,7 @@ DOMAIN-SUFFIX,bnappzh.co
 DOMAIN-SUFFIX,bnbstatic.com
 DOMAIN-SUFFIX,bnbzh.ac
 DOMAIN-SUFFIX,bntrace.com
+DOMAIN-SUFFIX,bscdnweb.com
 DOMAIN-SUFFIX,forter.com
 DOMAIN-SUFFIX,nftstatic.com
 DOMAIN-SUFFIX,saasexch.cc
