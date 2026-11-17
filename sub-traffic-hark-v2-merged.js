@@ -1036,7 +1036,7 @@ function multiLarge(ctx, list) {
   const sumToday = shown.reduce((a, s) => a + (s.today || 0), 0);
   const odd = shown.length % 2 === 1;
   const two = shown.length === 2;
-  const O = { height: odd ? 168 : (two ? 140 : 128), gap: odd || two ? 4 : 3, padding: [9, 11], name: 12, big: 22, small: 10 };
+  const O = { height: odd ? 160 : (two ? 140 : 128), gap: odd || two ? 4 : 3, padding: [9, 11], name: 12, big: 22, small: 10 };
   const cells = shown.map((s, i) => detailCard(s, i, O));
   if (odd) cells.push(sumCard(shown, sumRemain, sumToday, O));
   const rows = [];
