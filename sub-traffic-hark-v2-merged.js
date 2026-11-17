@@ -1053,7 +1053,7 @@ function multiLarge(ctx, list) {
     ],
   }];
   return {
-    type: 'widget', padding: [12, 14], gap: 8, backgroundGradient: bg(), refreshAfter: refreshAt(ctx),
+    type: 'widget', padding: [20, 14], gap: 8, backgroundGradient: bg(), refreshAfter: refreshAt(ctx),
     children: [header(list, titleOf(ctx, list)), ...top, ...rows, { type: 'spacer' }],
   };
 }
