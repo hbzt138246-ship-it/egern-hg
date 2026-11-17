@@ -1002,9 +1002,9 @@ function sumCard(shown, sumRemain, sumToday, o) {
       type: 'stack', direction: 'row', alignItems: 'center', gap: 5,
       children: [
         T('近7天', 9, C.dim, 'medium', { minScale: 1 }),
-        { type: 'image', src: stackSvg(shown, 90, 14), width: 70, height: 12 },
+        { type: 'image', src: stackSvg(shown, 70, 14), width: 52, height: 12 },
         { type: 'spacer' },
-        T(fmtBytes(weekTotal), 9, C.accent, 'semibold', { minScale: 1 }),
+        T(fmtBytes(weekTotal), 9, C.accent, 'semibold', { minScale: 0.8 }),
       ],
     }] : []),
     T(nodes ? `共 ${nodes} 节点` : ' ', 10, C.dim, 'medium', { minScale: 1 }),
