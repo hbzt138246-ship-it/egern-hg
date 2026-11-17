@@ -605,6 +605,30 @@ function weekSvg(list, w, h) {
   return svgUri(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${w} ${h}'>${body}</svg>`);
 }
 
+// 近 7 天合并堆叠柱状图：每天一根柱子，按订阅颜色分段上下堆叠（最后一天是今天）
+function stackSvg(list, w, h) {
+  const n = 7, gap = 3, bw = (w - gap * (n - 1)) / n;
+  const vals = list.map(s => (s.hist || [null, null, null, null, null, null, s.today]).map(v => v || 0));
+  const totals = [];
+  for (let d = 0; d < n; d++) totals.push(vals.reduce((a, v) => a + v[d], 0));
+  const max = Math.max(1, ...totals);
+  let body = '';
+  for (let d = 0; d < n; d++) {
+    const x = (d * (bw + gap)).toFixed(1);
+    const op = d === n - 1 ? 1 : 0.55;
+    let y = h;
+    vals.forEach((v, k) => {
+      const val = v[d] || 0;
+      if (!val) return;
+      const bh = (val / max) * h;
+      y -= bh;
+      body += `<rect x='${x}' y='${y.toFixed(1)}' width='${bw.toFixed(1)}' height='${bh.toFixed(1)}' fill='${colorOf(k)}' fill-opacity='${op}'/>`;
+    });
+    if (totals[d] === 0) body += `<rect x='${x}' y='${(h - 2).toFixed(1)}' width='${bw.toFixed(1)}' height='2' rx='1' fill='${colorOf(0)}' fill-opacity='0.15'/>`;
+  }
+  return svgUri(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${w} ${h}'>${body}</svg>`);
+}
+
 function barSvg(pct, color, w, h) {
   const p = Math.max(0, Math.min(1, Number(pct) || 0));
   const r = h / 2, fw = p > 0 ? Math.max(h, w * p) : 0;
@@ -978,7 +1002,7 @@ function sumCard(shown, sumRemain, sumToday, o) {
       type: 'stack', direction: 'row', alignItems: 'center', gap: 5,
       children: [
         T('近7天', 9, C.dim, 'medium', { minScale: 1 }),
-        { type: 'image', src: sparkSvg(mh, C.accent, 90, 14), width: 70, height: 12 },
+        { type: 'image', src: stackSvg(shown, 90, 14), width: 70, height: 12 },
         { type: 'spacer' },
         T(fmtBytes(weekTotal), 9, C.accent, 'semibold', { minScale: 1 }),
       ],
