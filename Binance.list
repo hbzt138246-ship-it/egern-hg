@@ -1,17 +1,20 @@
 # NAME: Binance
 # AUTHOR: blackmatrix7 + QuixoticHeart proxy.yaml + Binance dynamic-config + Binance AWS ELB, consolidated 2026-11-16
 # UPDATED: 2026-11-17
-# DOMAIN-SUFFIX: 70
+# DOMAIN-SUFFIX: 79
 # DOMAIN: 1
 # IP-CIDR: 3
-# TOTAL: 74
+# TOTAL: 83
 DOMAIN,aad90d5c0e88c4b4285bd912f64d970d-14039444741.ap-northeast-1.elb.amazonaws.com
+DOMAIN-SUFFIX,binance-corp.com
+DOMAIN-SUFFIX,binance.art
 DOMAIN-SUFFIX,binance.cc
 DOMAIN-SUFFIX,binance.charity
 DOMAIN-SUFFIX,binance.click
 DOMAIN-SUFFIX,binance.cloud
 DOMAIN-SUFFIX,binance.co
 DOMAIN-SUFFIX,binance.com
+DOMAIN-SUFFIX,binance.dev
 DOMAIN-SUFFIX,binance.im
 DOMAIN-SUFFIX,binance.info
 DOMAIN-SUFFIX,binance.me
@@ -33,6 +36,7 @@ DOMAIN-SUFFIX,binancewv.link
 DOMAIN-SUFFIX,binancewv.mobi
 DOMAIN-SUFFIX,binancewv.net
 DOMAIN-SUFFIX,binancewv.ninja
+DOMAIN-SUFFIX,binancezh.ac
 DOMAIN-SUFFIX,binancezh.be
 DOMAIN-SUFFIX,binancezh.biz
 DOMAIN-SUFFIX,binancezh.cc
@@ -40,6 +44,7 @@ DOMAIN-SUFFIX,binancezh.co
 DOMAIN-SUFFIX,binancezh.com
 DOMAIN-SUFFIX,binancezh.info
 DOMAIN-SUFFIX,binancezh.ink
+DOMAIN-SUFFIX,binancezh.io
 DOMAIN-SUFFIX,binancezh.kim
 DOMAIN-SUFFIX,binancezh.link
 DOMAIN-SUFFIX,binancezh.live
@@ -48,6 +53,7 @@ DOMAIN-SUFFIX,binancezh.net
 DOMAIN-SUFFIX,binancezh.pro
 DOMAIN-SUFFIX,binancezh.sh
 DOMAIN-SUFFIX,binancezh.top
+DOMAIN-SUFFIX,bnapp.com
 DOMAIN-SUFFIX,bnappweb.academy
 DOMAIN-SUFFIX,bnappweb.black
 DOMAIN-SUFFIX,bnappzh.co
@@ -56,8 +62,11 @@ DOMAIN-SUFFIX,bnappzh.mobi
 DOMAIN-SUFFIX,bnbchain.org
 DOMAIN-SUFFIX,bnbstatic.com
 DOMAIN-SUFFIX,bnbzh.ac
+DOMAIN-SUFFIX,bnet.com
 DOMAIN-SUFFIX,bntrace.com
 DOMAIN-SUFFIX,bscdnweb.com
+DOMAIN-SUFFIX,coinmarketcap.com
+DOMAIN-SUFFIX,download-binance.com
 DOMAIN-SUFFIX,mokexapp.cloud
 DOMAIN-SUFFIX,mokexapp.club
 DOMAIN-SUFFIX,mokexapp.co
