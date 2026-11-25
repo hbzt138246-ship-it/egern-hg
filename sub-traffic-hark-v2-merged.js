@@ -318,8 +318,18 @@ function readSubs(ctx) {
 
 function applyPlanTotal(sub, traffic) {
   const planGB = sub.planGB ? Number(sub.planGB) : 100;
-  if (!traffic || Number.isFinite(traffic.total) || !Number.isFinite(planGB) || planGB <= 0) return traffic;
+  if (!traffic || !Number.isFinite(planGB) || planGB <= 0) return traffic;
+  const missing = !Number.isFinite(traffic.total);
+  // 机场返回的 total 若是 1 PB 这类占位符，也以手动填的套餐总量为准
+  const placeholder = Number.isFinite(traffic.total) && traffic.total >= 1024 ** 5;
+  if (!missing && !placeholder) return traffic;
   const total = planGB * (1024 ** 3);
+  if (placeholder) {
+    // 占位符时必须手动填了总量才覆盖；已用取响应头里的 upload+download 实数
+    if (!sub.planGB) return traffic;
+    const used = Number.isFinite(traffic.used) ? traffic.used : 0;
+    return { ...traffic, total, used, remaining: Math.max(0, total - used), partial: false, totalEstimated: true };
+  }
   return { ...traffic, total, used: Math.max(0, total - traffic.remaining), partial: false, totalEstimated: true };
 }
 
