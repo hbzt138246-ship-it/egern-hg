@@ -80,7 +80,7 @@ env_schema:
 scriptings:
 - generic:
     name: 订阅流量监控-Hark2
-    script_url: https://raw.githubusercontent.com/hbzt138246-ship-it/egern-hg/main/sub-traffic-hark-v2-merged.js?v=20261125
+    script_url: https://raw.githubusercontent.com/hbzt138246-ship-it/egern-hg/main/sub-traffic-hark-v2-merged.js?v=20261117
     timeout: 30
 widgets:
 - name: 订阅流量监控-Hark2
